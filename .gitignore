@@ -1,0 +1,30 @@
+
+# LaTeX: вспомогательные файлы компиляции
+*.aux
+*.log
+*.out
+*.synctex.gz
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.bbl
+*.blg
+*.bcf
+*.run.xml
+*.nav
+*.snm
+*.vrb
+*.xdv
+*.synctex
+*.synctex.gz(busy)
+
+# Временные файлы
+*.bak
+*.tmp
+*.swp
+
+# Файлы, которые сохраняем:
+# *.tex
+# *.pdf
