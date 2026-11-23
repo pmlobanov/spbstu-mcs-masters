@@ -1,0 +1,152 @@
+% !TeX program = pdflatex
+\documentclass[11pt]{article}
+\usepackage[paperwidth=420mm,paperheight=297mm,margin=15mm]{geometry}
+\usepackage[utf8]{inputenc}
+\usepackage[T1,T2A]{fontenc}
+\usepackage[russian]{babel}
+\usepackage{array}
+\usepackage{url}
+\usepackage[hidelinks]{hyperref}
+\urlstyle{same}
+\makeatletter
+\g@addto@macro\UrlBreaks{\do\0\do\1\do\2\do\3\do\4\do\5\do\6\do\7\do\8\do\9}
+\makeatother
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.15}
+
+\newcolumntype{R}[1]{>{\raggedright\arraybackslash}m{#1}}
+\newcommand{\doi}[1]{\url{https://doi.org/#1}}
+\newcommand{\nd}{\textemdash}
+\newcommand{\given}[1]{#1\textsuperscript{*}}
+\newcommand{\both}{Scopus, WoS}
+\newcommand{\art}{Research article}
+\newcommand{\cheng}{\href{https://www.sciencedirect.com/author/55600148100/long-cheng}{30}}
+\newcommand{\parttitle}[1]{%
+	\vspace*{\fill}
+	\noindent\makebox[\textwidth]{%
+		\fontsize{14}{17}\selectfont\bfseries
+		\ifnum#1=1\relax Приложение А\fi
+		\hfill
+		Сведения о публикациях (ч.~#1 из 3)%
+	}\par
+	\medskip
+}
+\newenvironment{pubs}{%
+	\begin{center}\begin{tabular}{|c|R{4.0cm}|R{1.7cm}|R{1.3cm}|R{5.2cm}|R{1.3cm}|R{7.0cm}|R{1.1cm}|R{3.8cm}|R{1.4cm}|R{2.8cm}|R{3.0cm}|}
+			\hline
+			\textbf{№}&\textbf{Журнал / сборник}&{\small\bfseries CiteScore}&\textbf{ИФ}&
+			\textbf{Авторы}&\textbf{Хирш}&\textbf{Название статьи}&\textbf{Год}&
+			\textbf{DOI}&\textbf{SJR}&\textbf{Индексация}&\textbf{Тип}\\\hline
+		}{\end{tabular}\end{center}}
+\newcommand{\notes}{\par\medskip\begingroup\small
+\par\endgroup\vspace*{\fill}}
+
+% Источники для сверки метрик (идентификаторы журналов, а не статей):
+% https://journalrank.rcsi.science/ru/record-sources/indicators/17621/  PVLDB
+% https://journalrank.rcsi.science/ru/record-sources/indicators/21438/  VLDB J.
+% https://journalrank.rcsi.science/ru/record-sources/indicators/8934/   Information Systems
+% https://journalrank.rcsi.science/ru/record-sources/indicators/8931/   Information Sciences
+% https://journalrank.rcsi.science/ru/record-sources/indicators/12989/  JPDC
+% https://www.bioxbio.com/journal/INFORM-SYST  JIF Information Systems
+% https://researchcloud.net/journal/1066-8888  JIF The VLDB Journal
+% https://researchcloud.net/journal/0743-7315  JIF JPDC
+% https://www.iit.comillas.edu/publicacion/info_revista/en/661/information-sciences  JIF
+% В карточках Pusan National University использованы годовые значения за 2024 год.
+% https://scholar2.pusan.ac.kr/en/journals/019f8e7a-11e0-758b-9637-916a776ad7c6  ESWA
+% https://scholar2.pusan.ac.kr/en/journals/019f8e7a-719e-71ab-87c5-80fcc3795239  KBS
+% https://scholar2.pusan.ac.kr/en/journals/019f8e7d-deeb-7dfb-a708-04316bde2151  JIP
+% https://scholar2.pusan.ac.kr/en/journals/019f8e79-c91a-76a0-a847-57458c4b2f42  DKE
+% https://scholar2.pusan.ac.kr/en/journals/019f8e7b-6b90-769b-9db6-a14b95a5f882  TNSM
+% https://scholar2.pusan.ac.kr/en/journals/019f8e7b-6733-7b9f-be4f-4e639e201b3a  Applied Sciences
+% https://scholar2.pusan.ac.kr/en/journals/019f8e7b-9778-7358-aa48-cba9406aeee4  PeerJ CS
+% https://scholar2.pusan.ac.kr/en/journals/019f8e7b-6b5e-7317-8823-58ed35f7386e  IEEE Access
+
+\begin{document}
+	
+	\parttitle{1}
+	\begin{pubs}
+		1 & Proceedings of the VLDB Endowment & 7,5 & 3.8 &
+		Viktor Leis, Andrey Gubichev, Atanas Mirchev, Peter Boncz, Alfons Kemper, Thomas Neumann &
+		{30} & How Good Are Query Optimizers, Really? & 2015 &
+		\doi{10.14778/2850583.2850594} & 1.767 & Scopus & \art\\\hline
+		2 & The VLDB Journal & 10.4 & 5.3 &
+		Stefan Manegold, Peter A. Boncz, Martin L. Kersten & 36 &
+		Optimizing database architecture for the new bottleneck: memory access & 2000 &
+		\doi{10.1007/s007780000031} & 1,258 & \both, Springer & \art\\\hline
+		3 & Expert Systems with Applications & 17,0 & 9.4 &
+		{\fontencoding{T1}\selectfont Frederico Augusto de Cezar Almeida Gonçalves, Frederico Gadelha Guimarães, Marcone Jamilson Freitas Souza} & 2 &
+		Query join ordering optimization with evolutionary multi-agent systems & 2014 &
+		\doi{10.1016/j.eswa.2014.05.005} & 1.939 & \both & \art\\\hline
+		4 & Information Systems &11.8 & 4.0&
+		Zhi Wang, Hancong Duan, Yamin Cheng, Geyong Min & {5} &
+		Learning complex predicates for cardinality estimation using recursive neural networks & 2024 &
+		\doi{10.1016/j.is.2024.102402} & 0,981 & Scopus& \art\\\hline
+		5 & Knowledge-Based Systems & 13.7 & 8.0 &
+		Xiaoqiao Xiong, Jiong Yu, Zhenzhen He & 3 &
+		AutoQuo: An Adaptive plan optimizer with reinforcement learning for query plan selection & 2024 &
+		\doi{10.1016/j.knosys.2024.112664} & 1.753 & Scopus & \art\\\hline
+		6 & 2024 IEEE 40th International Conference on Data Engineering (ICDE) &
+		7.2 & - &
+		Kai Zhong, Luming Sun, Tao Ji, Cuiping Li, Hong Chen & 2 &
+		FOSS: A Self-Learned Doctor for Query Optimizer & 2024 &
+		\doi{10.1109/ICDE60146.2024.00330} & 1.114 & Конференция $A^{*} по CORE$ & Conference paper\\\hline
+	\end{pubs}
+	\notes
+	
+	\clearpage
+	\parttitle{2}
+	\begin{pubs}
+		7 & Information Sciences & 14,6 & 6,0 &
+		Feng Liang, Francis Chi Moon Lau, Heming Cui, Yupeng Li, Bing Lin, Chengming Li, Xiping Hu & {6} &
+		RelJoin: Relative-cost-based selection of distributed join methods for query plan optimization & 2024 &
+		\doi{10.1016/j.ins.2023.120022} & 1,507 & Scopus & \art\\\hline
+		8 & Journal of Parallel and Distributed Computing & 10.3 & 3,4 &
+		Long Cheng, Spyros Kotoulas, Tomas E. Ward, Georgios Theodoropoulos & \cheng &
+		Improving the robustness and performance of parallel joins over distributed systems & 2017 &
+		\doi{10.1016/j.jpdc.2017.06.016} & 0.876 & Scopus & \art\\\hline
+		9 & Journal of Information Processing & 1,1 & 0,510 &
+		Yohanes Yohanie Fridelin Panduman, Ryuichi Ito, Makoto Onizuka & 14 &
+		Flow-Join++: Skew-aware Distributed Joins with Cardinality-based Heavy Hitter Prediction & 2026 &
+		\doi{10.2197/ipsjjip.34.671} & 0.172 & Scopus & \art\\\hline
+		10 & Data \& Knowledge Engineering & 8.4 & 3,9 &
+		Md Arif Rahman, Syed Jalaluddin Hashmi, Kethsiya Gnanajothy, Young-Koo Lee & 1 &
+		When temporary results meet intermediate index: An optimization technique of procedural SQL query processing & 2026 &
+		\doi{10.1016/j.datak.2026.102577} & 0.780 & Scopus & \art\\\hline
+		11 & Expert Systems with Applications & 17,0 & 9,4 &
+		Xiaoqiao Xiong, Jiong Yu, Dongfang Han, Xinru Tong & 3&
+		LOOPLINE: Parallel Monte-Carlo tree search with knowledge constraints and its application in query optimization & 2025 &
+		\doi{10.1016/j.eswa.2025.127490} & 1.939 & Scopus & \art\\\hline
+	\end{pubs}
+	\notes
+	
+	\clearpage
+	\parttitle{3}
+	\begin{pubs}
+		12 & IEEE Transactions on Network and Service Management & 10,9 & 5,7 &
+		Long Cheng, Ying Wang, Rutvij H. Jhaveri, Qingle Wang, Ying Mao & 39 &
+		Toward Network-Aware Query Execution Systems in Large Datacenters & 2023 &
+		\doi{10.1109/TNSM.2023.3273166} & 1,500 & \both & \art\\\hline
+		13 & Applied Sciences & 6.1 & 2,9 &
+		Yan Du, Zhi Cai, Zhiming Ding & 3 &
+		Query Optimization in Distributed Database Based on Improved Artificial Bee Colony Algorithm & 2024 &
+		\doi{10.3390/app14020846} & 0.555 & \both & \art\\\hline
+		14 & PeerJ Computer Science & 6,1 & 2,9 &
+		{\fontencoding{T1}\selectfont Fatih Türkmen, Belgin Ergenç Bostanoğlu} & 13 &
+		Dynamic parallelization in distributed join optimization & 2026 &
+		\doi{10.7717/peerj-cs.3614} & 0.618 & \both & \art\\\hline
+		15 & Proceedings of the VLDB Endowment & 7,5 & 3.8 &
+		{\fontencoding{T1}\selectfont Claude Barthels, Ingo Müller, Timo Schneider, Gustavo Alonso, Torsten Hoefler} & 9 &
+		Distributed Join Algorithms on Thousands of Cores & 2017 &
+		\doi{10.14778/3055540.3055545} & 1.767 & \both & \art\\\hline
+		16 & IEEE Access & 9,3 &6.04 &
+		Evdokia Kassela, Ioannis Konstantinou, Nectarios Koziris &  &
+		Accelerating Distributed Repartition Joins on Skewed Datasets via Patch-Based Shuffling & 2025 &
+		\doi{10.1109/ACCESS.2025.3547623} & 0.884 & \both & \art\\\hline
+	\end{pubs}
+	\notes
+\end{document}
+
+
+
